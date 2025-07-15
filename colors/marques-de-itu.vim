@@ -1,10 +1,3 @@
-" vim:fdm=marker:foldlevel=0
-"  ____           _
-" |  _ \ _ __ ___| |_ ___
-" | |_) | '__/ _ \ __/ _ \
-" |  __/| | |  __/ || (_) |
-" |_|   |_|  \___|\__\___/
-"
 " A minimal dark theme for VIM
 
 " Reset -------------------------------------------------------------------{{{1
@@ -14,7 +7,7 @@ highlight clear
 if exists("syntax_on")
 	syntax reset
 endif
-let g:colors_name = "preto"
+let g:colors_name = "marques-de-itu"
 
 
 " Palette ---------------------------------------------------------------- {{{1
@@ -88,8 +81,6 @@ function! s:HL(item, fgColor, bgColor, style, ...)
 	execute command
 endfunction
 
-
-" Composition ------------------------------------------------------------ {{{1
 
 " PRIMITIVES
 call s:HL('Boolean'		  , s:palette.gray09, s:palette.black , 'bold'	   )
@@ -201,20 +192,24 @@ call s:HL('WildMenu'   	  , s:palette.white	, s:palette.black , 'none'	   )
 call s:HL('DiffAdd'		  , s:palette.white , s:palette.green , 'none'	   )
 call s:HL('DiffChange'	  , s:palette.white , s:palette.blue  , 'none'	   )
 call s:HL('DiffDelete'	  , s:palette.white , s:palette.red   , 'none'	   )
-call s:HL('DiffText'	  , s:palette.black , s:palette.yellow, 'none'	   )
+call s:HL('DiffText'	  , s:palette.black , s:palette.yellow, 'underline'	   )
 
+" Font style syntax items
+hi Function     guifg=NONE     guibg=NONE  gui=italic       ctermfg=NONE  ctermbg=NONE  cterm=italic
+hi Identifier   guifg=NONE     guibg=NONE  gui=italic       ctermfg=NONE  ctermbg=NONE  cterm=italic
+hi Include      guifg=NONE     guibg=NONE  gui=italic       ctermfg=NONE  ctermbg=NONE  cterm=italic
+hi Keyword      guifg=NONE     guibg=NONE  gui=bold         ctermfg=NONE  ctermbg=NONE  cterm=bold
+hi Question     guifg=NONE     guibg=NONE  gui=NONE         ctermfg=NONE  ctermbg=NONE  cterm=NONE
+hi Statement    guifg=NONE     guibg=NONE  gui=bold         ctermfg=NONE  ctermbg=NONE  cterm=bold
+hi Type         guifg=NONE     guibg=NONE  gui=bold         ctermfg=NONE  ctermbg=NONE  cterm=bold
+hi Underlined   guifg=NONE     guibg=NONE  gui=underline    ctermfg=NONE  ctermbg=NONE  cterm=underline
+hi Title        guifg=NONE     guibg=NONE  gui=bold         ctermfg=NONE  ctermbg=NONE  cterm=bold
 
-" Links ------------------------------------------------------------------ {{{1
-
-" TODO
-
-
-" Filetype Specific ------------------------------------------------------ {{{1
-
-" TODO
-
-
-" Plugin Specific -------------------------------------------------------- {{{1
+" Diff highlighting
+hi DiffAdd     gui=NONE       ctermfg=107  ctermbg=NONE  cterm=NONE
+hi DiffDelete  gui=NONE       ctermfg=137  ctermbg=NONE  cterm=NONE
+hi DiffChange  gui=NONE       ctermfg=67   ctermbg=NONE  cterm=NONE
+hi DiffText    gui=underline  ctermfg=67   ctermbg=NONE  cterm=underline
 
 " RAINBOW PARENTHESIS
 

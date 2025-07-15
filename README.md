@@ -11,3 +11,8 @@ _photo: @brunohenrique_
 
 ### Diff
 ![Diff](./images/diff.png)
+
+## Resources
+
+- Heavily inspired on https://github.com/Lokaltog/vim-monotone and therefore its inspirations
+- https://michurin.github.io/xterm256-color-picker/

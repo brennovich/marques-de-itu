@@ -8,14 +8,14 @@ endif
 let g:colors_name = "marques-de-itu"
 
 
-" Color Definitions ------------------------------------------------------ {{{1
+" Color Definitions
 " This theme uses a comprehensive grayscale palette with selective accent colors:
-" - Grayscale: 24 levels from black (#000000) to near-white (#eeeeee)  
+" - Grayscale: 24 levels from black (#000000) to near-white (#eeeeee)
 " - Accents: Cyan, blue, green, red, purple, brown, orange, pink, yellow
 " - Terminal codes are provided for compatibility with terminal vim
 
 " PRIMITIVES
-hi Boolean		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
+hi Boolean		ctermfg=240 ctermbg=NONE cterm=italic		guifg=#585858 guibg=NONE gui=italic
 hi Character		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
 hi Constant		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
 hi Float		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
@@ -24,7 +24,7 @@ hi String		ctermfg=243 ctermbg=NONE cterm=none		guifg=#767676 guibg=NONE gui=non
 hi SpecialChar		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
 " COMMENTS
-hi Comment		ctermfg=236 ctermbg=NONE cterm=none		guifg=#303030 guibg=NONE gui=none
+hi Comment		ctermfg=236 ctermbg=NONE cterm=italic		guifg=#303030 guibg=NONE gui=italic
 hi SpecialComment	ctermfg=240 ctermbg=NONE cterm=none		guifg=#585858 guibg=NONE gui=none
 hi Title		ctermfg=240 ctermbg=NONE cterm=none		guifg=#585858 guibg=NONE gui=none
 hi Todo			ctermfg=126 ctermbg=NONE cterm=italic		guifg=#af0087 guibg=NONE gui=italic
@@ -88,9 +88,9 @@ hi Exception		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=
 
 " MISC
 hi Normal		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
-hi Cursor		ctermfg=16  ctermbg=255  cterm=none		guifg=#000000 guibg=#eeeeee gui=none
+hi Cursor		ctermfg=16  ctermbg=124  cterm=none		guifg=#000000 guibg=#e60012 gui=none
 hi Underlined		ctermfg=243 ctermbg=NONE cterm=underline		guifg=#767676 guibg=NONE gui=underline
-hi SpecialKey		ctermfg=228 ctermbg=NONE cterm=none		guifg=#ffff87 guibg=NONE gui=none
+hi SpecialKey		ctermfg=236 ctermbg=NONE cterm=none		guifg=#ffff87 guibg=NONE gui=none
 hi NonText		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 hi Directory		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
@@ -111,20 +111,20 @@ hi PmenuThumb		ctermfg=232 ctermbg=240 cterm=none		guifg=#080808 guibg=#585858 g
 hi VertSplit		ctermfg=16  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
 
 " OTHERS
-hi Debug		ctermfg=255 ctermbg=16   cterm=none		guifg=#eeeeee guibg=#000000 gui=none
-hi Delimiter		ctermfg=255 ctermbg=16   cterm=none		guifg=#eeeeee guibg=#000000 gui=none
-hi Question		ctermfg=255 ctermbg=16   cterm=none		guifg=#eeeeee guibg=#000000 gui=none
-hi Special		ctermfg=255 ctermbg=16   cterm=none		guifg=#eeeeee guibg=#000000 gui=none
-hi StatusLine		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
-hi StatusLineNC		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi Debug		ctermfg=255 ctermbg=NONE cterm=none		guifg=#eeeeee guibg=#000000 gui=none
+hi Delimiter		ctermfg=255 ctermbg=NONE cterm=none		guifg=#eeeeee guibg=#000000 gui=none
+hi Question		ctermfg=255 ctermbg=NONE cterm=none		guifg=#eeeeee guibg=#000000 gui=none
+hi Special		ctermfg=255 ctermbg=NONE cterm=none		guifg=#eeeeee guibg=#000000 gui=none
+hi StatusLine		ctermfg=250 ctermbg=237  cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi StatusLineNC		ctermfg=250 ctermbg=235  cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 hi Tag			ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 hi WildMenu		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
 " DIFF
-hi DiffAdd		ctermfg=250 ctermbg=22	cterm=none		guifg=#bcbcbc guibg=#005f00 gui=none
-hi DiffChange		ctermfg=250 ctermbg=234	cterm=none		guifg=#bcbcbc guibg=#1c1c1c gui=none
-hi DiffDelete		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
-hi DiffText		ctermfg=250 ctermbg=33	cterm=none		guifg=#bcbcbc guibg=#0087ff gui=none
+hi DiffAdd		ctermfg=250 ctermbg=22  cterm=none		guifg=#bcbcbc guibg=#005f00 gui=none
+hi DiffChange		ctermfg=250 ctermbg=234 cterm=none		guifg=#bcbcbc guibg=#1c1c1c gui=none
+hi DiffDelete		ctermfg=250 ctermbg=88  cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi DiffText		ctermfg=250 ctermbg=33  cterm=none		guifg=#bcbcbc guibg=#0087ff gui=none
 
 hi def link diffAdded		DiffAdd
 hi def link diffChanged		DiffChange

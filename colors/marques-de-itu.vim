@@ -1,7 +1,5 @@
 " A minimal dark theme for VIM
 
-" Reset -------------------------------------------------------------------{{{1
-
 set background=dark
 highlight clear
 if exists("syntax_on")
@@ -10,224 +8,127 @@ endif
 let g:colors_name = "marques-de-itu"
 
 
-" Palette ---------------------------------------------------------------- {{{1
-
-let s:palette = {}
-
-let s:palette.black  	 = [16 , "#000000"]
-let s:palette.gray01 	 = [232, "#080808"]
-let s:palette.gray02 	 = [233, "#121212"]
-let s:palette.gray03 	 = [234, "#1c1c1c"]
-let s:palette.gray04 	 = [235, "#262626"]
-let s:palette.gray05 	 = [236, "#303030"]
-let s:palette.gray06 	 = [237, "#3a3a3a"]
-let s:palette.gray07 	 = [238, "#444444"]
-let s:palette.gray08 	 = [239, "#4e4e4e"]
-let s:palette.gray09 	 = [240, "#585858"]
-let s:palette.gray10 	 = [241, "#606060"]
-let s:palette.gray11 	 = [242, "#666666"]
-let s:palette.gray12 	 = [243, "#767676"]
-let s:palette.gray13 	 = [244, "#808080"]
-let s:palette.gray14 	 = [245, "#8a8a8a"]
-let s:palette.gray15 	 = [246, "#949494"]
-let s:palette.gray16 	 = [247, "#9e9e9e"]
-let s:palette.gray17 	 = [248, "#a8a8a8"]
-let s:palette.gray18 	 = [249, "#b2b2b2"]
-let s:palette.gray19 	 = [250, "#bcbcbc"]
-let s:palette.gray20 	 = [251, "#c6c6c6"]
-let s:palette.gray21 	 = [252, "#d0d0d0"]
-let s:palette.gray22 	 = [253, "#dadada"]
-let s:palette.gray23 	 = [254, "#e4e4e4"]
-let s:palette.white  	 = [255, "#eeeeee"]
-
-let s:palette.cyan 		 = [6  , "#008080"]
-let s:palette.darkblue 	 = [18 , "#000087"]
-let s:palette.darkgreen  = [22 , "#005f00"]
-let s:palette.blue   	 = [33 , "#0087ff"]
-let s:palette.green  	 = [42 , "#00d787"]
-let s:palette.darkred 	 = [52 , "#5f0000"]
-let s:palette.darkpurple = [53 , "#5f005f"]
-let s:palette.darkyellow = [58 , "#5f5f00"]
-let s:palette.red      	 = [124, "#af0000"]
-let s:palette.purple 	 = [129, "#af00ff"]
-let s:palette.brown 	 = [130, "#af5f00"]
-let s:palette.orange 	 = [166, "#d75f00"]
-let s:palette.pink 		 = [200, "#ff00d7"]
-let s:palette.yellow	 = [228, "#ffff87"]
-
-
-" Utilities -------------------------------------------------------------- {{{1
-
-function! s:HL(item, fgColor, bgColor, style, ...)
-	let undesirable_runtimes = a:000
-	for runtime in undesirable_runtimes
-		if has(runtime)
-			return	
-		end
-	endfor
-
-	let target = 'cterm'
-	let pindex = 0
-	if has('gui_running') || has('nvim')
-		let target = 'gui'
-		let pindex = 1
-	end
-
-	let command  = 'hi ' . a:item
-	let command .= ' ' . target . 'fg=' . a:fgColor[pindex]
-	let command .= ' ' . target . 'bg=' . a:bgColor[pindex]
-	let command .= ' ' . target . '=' . a:style
-
-	execute command
-endfunction
-
+" Color Definitions ------------------------------------------------------ {{{1
+" This theme uses a comprehensive grayscale palette with selective accent colors:
+" - Grayscale: 24 levels from black (#000000) to near-white (#eeeeee)  
+" - Accents: Cyan, blue, green, red, purple, brown, orange, pink, yellow
+" - Terminal codes are provided for compatibility with terminal vim
 
 " PRIMITIVES
-call s:HL('Boolean'		  , s:palette.gray09, s:palette.black , 'bold'	   )
-call s:HL('Character'	  , s:palette.gray09, s:palette.black , 'bold'	   )
-call s:HL('Constant'	  , s:palette.gray09, s:palette.black , 'bold'	   )
-call s:HL('Float'		  , s:palette.gray09, s:palette.black , 'bold'	   )
-call s:HL('Number'		  , s:palette.gray09, s:palette.black , 'bold'	   )
-call s:HL('String'		  , s:palette.gray12, s:palette.black , 'none'	   )
-call s:HL('SpecialChar'	  , s:palette.white , s:palette.black , 'none'	   )
+hi Boolean		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
+hi Character		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
+hi Constant		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
+hi Float		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
+hi Number		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
+hi String		ctermfg=243 ctermbg=NONE cterm=none		guifg=#767676 guibg=NONE gui=none
+hi SpecialChar		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
 " COMMENTS
-call s:HL('Comment'		  , s:palette.gray05, s:palette.black , 'bold'	   )
-call s:HL('SpecialComment', s:palette.gray09, s:palette.black , 'bold'	   )
-call s:HL('Title'		  , s:palette.gray09, s:palette.black , 'bold'	   )
-call s:HL('Todo'		  , s:palette.purple, s:palette.black , 'bold'	   )
+hi Comment		ctermfg=236 ctermbg=NONE cterm=none		guifg=#303030 guibg=NONE gui=none
+hi SpecialComment	ctermfg=240 ctermbg=NONE cterm=none		guifg=#585858 guibg=NONE gui=none
+hi Title		ctermfg=240 ctermbg=NONE cterm=none		guifg=#585858 guibg=NONE gui=none
+hi Todo			ctermfg=126 ctermbg=NONE cterm=italic		guifg=#af0087 guibg=NONE gui=italic
 
 " LINES, COLUMNS
-call s:HL('LineNr'		  , s:palette.gray06, s:palette.black , 'bold'	   )
-call s:HL('CursorLine'	  , s:palette.white , s:palette.gray03, 'none'	   )
-call s:HL('CursorLineNr'  , s:palette.gray09, s:palette.black , 'bold'	   )
+hi LineNr		ctermfg=237 ctermbg=NONE cterm=bold		guifg=#3a3a3a guibg=NONE gui=bold
+hi CursorLine		ctermfg=250 ctermbg=234  cterm=none		guifg=#bcbcbc guibg=#1c1c1c gui=none
+hi CursorLineNr		ctermfg=240 ctermbg=NONE cterm=bold		guifg=#585858 guibg=NONE gui=bold
 
-call s:HL('ColorColumn'	  , s:palette.white , s:palette.gray03, 'none'	   )
-call s:HL('CursorColumn'  , s:palette.gray16, s:palette.gray03, 'none'	   )
+hi ColorColumn		ctermfg=250 ctermbg=234  cterm=none		guifg=#bcbcbc guibg=#1c1c1c gui=none
+hi CursorColumn		ctermfg=247 ctermbg=234  cterm=none		guifg=#9e9e9e guibg=#1c1c1c gui=none
 
 " VISUAL MODE
-call s:HL('Visual'		  , s:palette.green , s:palette.gray06, 'none'	   )
-call s:HL('VisualNOS'	  , s:palette.green , s:palette.gray06, 'none'	   )
+hi Visual		ctermfg=42  ctermbg=235 cterm=italic		guifg=#00d787 guibg=#3a3a3a gui=italic
+hi VisualNOS		ctermfg=42  ctermbg=236 cterm=italic		guifg=#00d787 guibg=#3a3a3a gui=italic
 
 " SEARCH
-call s:HL('Search'		  , s:palette.black , s:palette.yellow, 'bold'	   )
-call s:HL('IncSearch'	  , s:palette.yellow, s:palette.black , 'bold'	   )
+hi Search		ctermfg=233 ctermbg=226 cterm=bold,italic	guifg=#121212 guibg=#ffff00 gui=bold,italic
+hi IncSearch		ctermfg=226 ctermbg=NONE cterm=bold		guifg=#ffff00 guibg=NONE gui=bold
 
 " SPELLING
-call s:HL('SpellBad'	  , s:palette.white , s:palette.red	  , 'bold'	   )
-call s:HL('SpellCap'	  , s:palette.white , s:palette.red	  , 'bold'	   )
-call s:HL('SpellLocal'	  , s:palette.white , s:palette.red	  , 'bold'	   )
-call s:HL('SpellRare'	  , s:palette.white , s:palette.red	  , 'bold'	   )
+hi SpellBad		ctermfg=250 ctermbg=124 cterm=bold		guifg=#bcbcbc guibg=#af0000 gui=bold
+hi SpellCap		ctermfg=250 ctermbg=124 cterm=bold		guifg=#bcbcbc guibg=#af0000 gui=bold
+hi SpellLocal		ctermfg=250 ctermbg=124 cterm=bold		guifg=#bcbcbc guibg=#af0000 gui=bold
+hi SpellRare		ctermfg=250 ctermbg=124 cterm=bold		guifg=#bcbcbc guibg=#af0000 gui=bold
 
 " ERROR
-call s:HL('Error'		  , s:palette.red	, s:palette.black , 'bold'	   )
+hi Error		ctermfg=124 ctermbg=NONE cterm=bold		guifg=#af0000 guibg=NONE gui=bold
 
 " COMMAND MODE MESSAGES
-call s:HL('ErrorMsg'	  , s:palette.red	, s:palette.black , 'bold'	   )
-call s:HL('WarningMsg'	  , s:palette.brown	, s:palette.black , 'bold'	   )
-call s:HL('ModeMsg'		  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('MoreMsg'		  , s:palette.white	, s:palette.black , 'bold'	   )
+hi ErrorMsg		ctermfg=124 ctermbg=NONE cterm=none		guifg=#af0000 guibg=NONE gui=none
+hi WarningMsg		ctermfg=130 ctermbg=NONE cterm=none		guifg=#af5f00 guibg=NONE gui=none
+hi ModeMsg		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi MoreMsg		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
 " PREPROCESSOR DIRECTIVES
-call s:HL('Include'		  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Define'		  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Macro'		  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('PreCondit'	  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('PreProc'		  , s:palette.white	, s:palette.black , 'bold'	   )
+hi Include		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Define		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Macro		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi PreCondit		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi PreProc		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 
 " BINDINGS
-call s:HL('Identifier'	  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Function'	  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Keyword'		  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Operator'	  , s:palette.white	, s:palette.black , 'bold'	   )
+hi Identifier		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Function		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Keyword		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Operator		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 
 " TYPES
-call s:HL('Type'		  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Typedef'	  	  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('StorageClass'  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Structure'	  , s:palette.white	, s:palette.black , 'bold'	   )
+hi Type			ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Typedef		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi StorageClass		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Structure		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 
 " FLOW CONTROL
-call s:HL('Statement'	  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Conditional'	  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Repeat'		  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Label'		  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('Exception'	  , s:palette.white	, s:palette.black , 'bold'	   )
+hi Statement		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Conditional		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Repeat		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Label		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Exception		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 
 " MISC
-call s:HL('Normal'		  , s:palette.gray19, s:palette.black , 'none'	   )
-call s:HL('Cursor'		  , s:palette.white , s:palette.black , 'none'	   , 'gui_macvim')
-call s:HL('Underlined'	  , s:palette.gray12, s:palette.black , 'underline')
-call s:HL('SpecialKey'	  , s:palette.white	, s:palette.black , 'bold'	   )
-call s:HL('NonText'		  , s:palette.white , s:palette.black , 'bold'	   )
-call s:HL('Directory'  	  , s:palette.orange, s:palette.black , 'none'	   )
+hi Normal		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi Cursor		ctermfg=16  ctermbg=255  cterm=none		guifg=#000000 guibg=#eeeeee gui=none
+hi Underlined		ctermfg=243 ctermbg=NONE cterm=underline		guifg=#767676 guibg=NONE gui=underline
+hi SpecialKey		ctermfg=228 ctermbg=NONE cterm=none		guifg=#ffff87 guibg=NONE gui=none
+hi NonText		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi Directory		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
 " FOLD
-call s:HL('FoldColumn'	  , s:palette.gray06, s:palette.black , 'bold'	   )
-call s:HL('Folded'		  , s:palette.gray06, s:palette.black , 'bold'	   )
+hi FoldColumn		ctermfg=236 ctermbg=NONE cterm=none		guifg=#303030 guibg=NONE gui=none
+hi Folded		ctermfg=236 ctermbg=NONE cterm=none		guifg=#303030 guibg=NONE gui=none
 
 " PARENTHESIS
-call s:HL('MatchParen'	  , s:palette.orange, s:palette.black , 'bold'	   )
+hi MatchParen		ctermfg=166 ctermbg=NONE cterm=bold		guifg=#d75f00 guibg=NONE gui=bold
 
 " POPUP
-call s:HL('Pmenu'		  , s:palette.white , s:palette.gray09, 'none'	   )
-call s:HL('PmenuSbar'	  , s:palette.black , s:palette.gray19, 'none'	   )
-call s:HL('PmenuSel'	  , s:palette.black , s:palette.gray19, 'none'	   )
-call s:HL('PmenuThumb'	  , s:palette.gray01, s:palette.gray09, 'none'	   )
+hi Pmenu		ctermfg=250 ctermbg=240 cterm=none		guifg=#bcbcbc guibg=#585858 gui=none
+hi PmenuSbar		ctermfg=16  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
+hi PmenuSel		ctermfg=16  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
+hi PmenuThumb		ctermfg=232 ctermbg=240 cterm=none		guifg=#080808 guibg=#585858 gui=none
 
 " SPLITS
-call s:HL('VertSplit'	  , s:palette.gray19, s:palette.black , 'none'	   )
+hi VertSplit		ctermfg=16  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
 
 " OTHERS
-call s:HL('Debug'		  , s:palette.white	, s:palette.black , 'none'	   )
-call s:HL('Delimiter'  	  , s:palette.white	, s:palette.black , 'none'	   )
-call s:HL('Question'   	  , s:palette.white	, s:palette.black , 'none'	   )
-call s:HL('Special'		  , s:palette.white	, s:palette.black , 'none'	   )
-call s:HL('StatusLine' 	  , s:palette.white	, s:palette.black , 'none'	   , 'gui_macvim')
-call s:HL('StatusLineNC'  , s:palette.white	, s:palette.black , 'none'	   , 'gui_macvim')
-call s:HL('Tag'			  , s:palette.white	, s:palette.black , 'none'	   )
-call s:HL('WildMenu'   	  , s:palette.white	, s:palette.black , 'none'	   )
+hi Debug		ctermfg=255 ctermbg=16   cterm=none		guifg=#eeeeee guibg=#000000 gui=none
+hi Delimiter		ctermfg=255 ctermbg=16   cterm=none		guifg=#eeeeee guibg=#000000 gui=none
+hi Question		ctermfg=255 ctermbg=16   cterm=none		guifg=#eeeeee guibg=#000000 gui=none
+hi Special		ctermfg=255 ctermbg=16   cterm=none		guifg=#eeeeee guibg=#000000 gui=none
+hi StatusLine		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi StatusLineNC		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi Tag			ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi WildMenu		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
 " DIFF
-call s:HL('DiffAdd'		  , s:palette.white , s:palette.green , 'none'	   )
-call s:HL('DiffChange'	  , s:palette.white , s:palette.blue  , 'none'	   )
-call s:HL('DiffDelete'	  , s:palette.white , s:palette.red   , 'none'	   )
-call s:HL('DiffText'	  , s:palette.black , s:palette.yellow, 'underline'	   )
+hi DiffAdd		ctermfg=250 ctermbg=22	cterm=none		guifg=#bcbcbc guibg=#005f00 gui=none
+hi DiffChange		ctermfg=250 ctermbg=234	cterm=none		guifg=#bcbcbc guibg=#1c1c1c gui=none
+hi DiffDelete		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi DiffText		ctermfg=250 ctermbg=33	cterm=none		guifg=#bcbcbc guibg=#0087ff gui=none
 
-" Font style syntax items
-hi Function     guifg=NONE     guibg=NONE  gui=italic       ctermfg=NONE  ctermbg=NONE  cterm=italic
-hi Identifier   guifg=NONE     guibg=NONE  gui=italic       ctermfg=NONE  ctermbg=NONE  cterm=italic
-hi Include      guifg=NONE     guibg=NONE  gui=italic       ctermfg=NONE  ctermbg=NONE  cterm=italic
-hi Keyword      guifg=NONE     guibg=NONE  gui=bold         ctermfg=NONE  ctermbg=NONE  cterm=bold
-hi Question     guifg=NONE     guibg=NONE  gui=NONE         ctermfg=NONE  ctermbg=NONE  cterm=NONE
-hi Statement    guifg=NONE     guibg=NONE  gui=bold         ctermfg=NONE  ctermbg=NONE  cterm=bold
-hi Type         guifg=NONE     guibg=NONE  gui=bold         ctermfg=NONE  ctermbg=NONE  cterm=bold
-hi Underlined   guifg=NONE     guibg=NONE  gui=underline    ctermfg=NONE  ctermbg=NONE  cterm=underline
-hi Title        guifg=NONE     guibg=NONE  gui=bold         ctermfg=NONE  ctermbg=NONE  cterm=bold
+hi def link diffAdded		DiffAdd
+hi def link diffChanged		DiffChange
+hi def link diffCommon		Statement
+hi def link diffRemoved		DiffDelete
 
-" Diff highlighting
-hi DiffAdd     gui=NONE       ctermfg=107  ctermbg=NONE  cterm=NONE
-hi DiffDelete  gui=NONE       ctermfg=137  ctermbg=NONE  cterm=NONE
-hi DiffChange  gui=NONE       ctermfg=67   ctermbg=NONE  cterm=NONE
-hi DiffText    gui=underline  ctermfg=67   ctermbg=NONE  cterm=underline
 
-" RAINBOW PARENTHESIS
-
-let g:rbpt_colorpairs = [
-			\ s:palette.brown,
-			\ s:palette.gray11,
-			\ s:palette.purple,
-			\ s:palette.green,
-			\ s:palette.white,
-			\ s:palette.blue,
-			\ s:palette.yellow,
-			\ s:palette.red,
-			\ s:palette.brown,
-			\ s:palette.gray13,
-			\ s:palette.cyan,
-			\ s:palette.darkpurple,
-			\ s:palette.darkgreen,
-			\ s:palette.darkblue,
-			\ s:palette.darkyellow,
-			\ s:palette.darkred
-			\ ]

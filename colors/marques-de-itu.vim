@@ -103,8 +103,8 @@ hi MatchParen		ctermfg=166 ctermbg=NONE cterm=bold		guifg=#d75f00 guibg=NONE gui
 
 " POPUP
 hi Pmenu		ctermfg=250 ctermbg=240 cterm=none		guifg=#bcbcbc guibg=#585858 gui=none
-hi PmenuSbar		ctermfg=16  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
-hi PmenuSel		ctermfg=16  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
+hi PmenuSbar		ctermfg=234  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
+hi PmenuSel		ctermfg=232  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
 hi PmenuThumb		ctermfg=232 ctermbg=240 cterm=none		guifg=#080808 guibg=#585858 gui=none
 
 " SPLITS

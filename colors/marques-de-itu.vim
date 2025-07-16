@@ -63,15 +63,15 @@ hi MoreMsg		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=no
 " PREPROCESSOR DIRECTIVES
 hi Include		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 hi Define		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
-hi Macro		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Macro		ctermfg=245 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 hi PreCondit		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 hi PreProc		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 
 " BINDINGS
-hi Identifier		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
-hi Function		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
-hi Keyword		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
-hi Operator		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Identifier		ctermfg=245 ctermbg=NONE cterm=italic		guifg=#bcbcbc guibg=NONE gui=bold
+hi Function		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=bold
+hi Keyword		ctermfg=245 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Operator		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=bold
 
 " TYPES
 hi Type			ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold

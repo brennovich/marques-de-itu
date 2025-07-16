@@ -38,12 +38,12 @@ hi ColorColumn		ctermfg=250 ctermbg=234  cterm=none		guifg=#bcbcbc guibg=#1c1c1c
 hi CursorColumn		ctermfg=247 ctermbg=234  cterm=none		guifg=#9e9e9e guibg=#1c1c1c gui=none
 
 " VISUAL MODE
-hi Visual		ctermfg=42  ctermbg=235 cterm=italic		guifg=#00d787 guibg=#3a3a3a gui=italic
-hi VisualNOS		ctermfg=42  ctermbg=236 cterm=italic		guifg=#00d787 guibg=#303030 gui=italic
+hi Visual		ctermfg=236  ctermbg=250 cterm=italic		guifg=#00d787 guibg=#3a3a3a gui=italic
+hi VisualNOS		ctermfg=240  ctermbg=250 cterm=italic		guifg=#00d787 guibg=#303030 gui=italic
 
 " SEARCH
-hi Search		ctermfg=233 ctermbg=226 cterm=bold,italic	guifg=#121212 guibg=#ffff00 gui=bold,italic
-hi IncSearch		ctermfg=226 ctermbg=NONE cterm=bold		guifg=#ffff00 guibg=NONE gui=bold
+hi Search		ctermfg=233 ctermbg=220 cterm=bold,italic	guifg=#121212 guibg=#ffff00 gui=bold,italic
+hi IncSearch		ctermfg=220 ctermbg=NONE cterm=bold		guifg=#ffff00 guibg=NONE gui=bold
 
 " SPELLING
 hi SpellBad		ctermfg=250 ctermbg=124 cterm=bold		guifg=#bcbcbc guibg=#af0000 gui=bold
@@ -90,7 +90,7 @@ hi Exception		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=
 hi Normal		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 hi Cursor		ctermfg=16  ctermbg=124  cterm=none		guifg=#000000 guibg=#e60012 gui=none
 hi Underlined		ctermfg=243 ctermbg=NONE cterm=underline		guifg=#767676 guibg=NONE gui=underline
-hi SpecialKey		ctermfg=236 ctermbg=NONE cterm=none		guifg=#303030 guibg=NONE gui=none
+hi SpecialKey		ctermfg=234 ctermbg=NONE cterm=none		guifg=#303030 guibg=NONE gui=none
 hi NonText		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 hi Directory		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 

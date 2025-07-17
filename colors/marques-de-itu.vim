@@ -63,15 +63,15 @@ hi MoreMsg		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=no
 " PREPROCESSOR DIRECTIVES
 hi Include		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 hi Define		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
-hi Macro		ctermfg=245 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
+hi Macro		ctermfg=245 ctermbg=NONE cterm=bold		guifg=#8a8a8a guibg=NONE gui=bold
 hi PreCondit		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 hi PreProc		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 
 " BINDINGS
-hi Identifier		ctermfg=245 ctermbg=NONE cterm=italic		guifg=#bcbcbc guibg=NONE gui=bold
-hi Function		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=bold
-hi Keyword		ctermfg=245 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
-hi Operator		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=bold
+hi Identifier		ctermfg=245 ctermbg=NONE cterm=italic		guifg=#8a8a8a guibg=NONE gui=italic
+hi Function		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+hi Keyword		ctermfg=245 ctermbg=NONE cterm=bold		guifg=#8a8a8a guibg=NONE gui=bold
+hi Operator		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
 " TYPES
 hi Type			ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
@@ -88,9 +88,9 @@ hi Exception		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=
 
 " MISC
 hi Normal		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
-hi Cursor		ctermfg=16  ctermbg=124  cterm=none		guifg=#000000 guibg=#e60012 gui=none
+hi Cursor		ctermfg=16  ctermbg=124  cterm=none		guifg=#000000 guibg=#af0000 gui=none
 hi Underlined		ctermfg=243 ctermbg=NONE cterm=underline		guifg=#767676 guibg=NONE gui=underline
-hi SpecialKey		ctermfg=234 ctermbg=NONE cterm=none		guifg=#303030 guibg=NONE gui=none
+hi SpecialKey		ctermfg=234 ctermbg=NONE cterm=none		guifg=#1c1c1c guibg=NONE gui=none
 hi NonText		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 hi Directory		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
@@ -103,8 +103,8 @@ hi MatchParen		ctermfg=166 ctermbg=NONE cterm=bold		guifg=#d75f00 guibg=NONE gui
 
 " POPUP
 hi Pmenu		ctermfg=250 ctermbg=240 cterm=none		guifg=#bcbcbc guibg=#585858 gui=none
-hi PmenuSbar		ctermfg=234  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
-hi PmenuSel		ctermfg=232  ctermbg=250 cterm=none		guifg=#000000 guibg=#bcbcbc gui=none
+hi PmenuSbar		ctermfg=234  ctermbg=250 cterm=none		guifg=#1c1c1c guibg=#bcbcbc gui=none
+hi PmenuSel		ctermfg=232  ctermbg=250 cterm=none		guifg=#080808 guibg=#bcbcbc gui=none
 hi PmenuThumb		ctermfg=232 ctermbg=240 cterm=none		guifg=#080808 guibg=#585858 gui=none
 
 " SPLITS

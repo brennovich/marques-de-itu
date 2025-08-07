@@ -8,6 +8,8 @@ _photo: @brunohenrique_
 
 This is a 256-color theme. These days I try to use as vanilla a setup as possible, so I rely on Terminal.app, which only supports 256 colors.
 
+It support light and dark background, your terminal should set the background color accordingly.
+
 ### Installation
 
 ```
@@ -23,7 +25,8 @@ colorscheme marques-de-itu
 ## Preview
 
 ### Golang
-![Golang](./images/golang.png)
+![Golang](./images/golang-light.png)
+![Golang](./images/golang-dark.png)
 
 ### Diff
 ![Diff](./images/diff.png)

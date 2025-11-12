@@ -12,6 +12,8 @@ It support light and dark background, your terminal should set the background co
 
 ### Installation
 
+#### Vim
+
 ```
 git clone https://github.com/brennovich/marques-de-itu.git ~/.vim/pack/plugins/start/marques-de-itu
 ```
@@ -20,6 +22,20 @@ Then set the colorscheme in your `.vimrc`:
 
 ```vim
 colorscheme marques-de-itu
+```
+
+#### Ghostty
+
+Copy the theme file to your Ghostty themes directory:
+
+```
+cp ghostty ~/.config/ghostty/themes/marques-de-itu
+```
+
+Then set the theme in your Ghostty config (`~/.config/ghostty/config`):
+
+```
+theme = "marques-de-itu"
 ```
 
 ## Preview

@@ -1,0 +1,28 @@
+# Marquês de Itu - Ghostty Theme
+# A minimalistic grayscale theme with selective accent colors
+# Based on the marques-de-itu Vim colorscheme
+
+foreground = #bcbcbc
+background = #101010
+cursor-color = #af0000
+cursor-text = #000000
+
+selection-foreground = #bcbcbc
+selection-background = #303030
+
+palette = 0=#121212
+palette = 1=#af0000
+palette = 2=#005f00
+palette = 3=#ffd700
+palette = 4=#0087ff
+palette = 5=#af0087
+palette = 6=#585858
+palette = 7=#bcbcbc
+palette = 8=#444444
+palette = 9=#af0000
+palette = 10=#005f00
+palette = 11=#ffd700
+palette = 12=#0087ff
+palette = 13=#af0087
+palette = 14=#808080
+palette = 15=#eeeeee

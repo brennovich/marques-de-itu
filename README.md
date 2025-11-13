@@ -11,6 +11,20 @@ This is a 256-color theme. These days I try to use as vanilla a setup as possibl
 
 It support light and dark background, your terminal should set the background color accordingly.
 
+## Configuration
+
+### Search Highlight Style
+
+By default, search highlights use a bright color (yellow for dark mode, orange for light mode) to make matches ultra easy to spot. You can switch to a more subtle monochromatic style by adding this to your `.vimrc`:
+
+```vim
+let g:marques_search_highlight_style = 'monochrome'
+```
+
+Available options:
+- `'default'` - Bright yellow/orange highlights (default)
+- `'monochrome'` - Subtle grayscale highlights
+
 ## Installation
 
 ### Vim

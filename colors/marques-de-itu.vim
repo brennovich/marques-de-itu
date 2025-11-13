@@ -6,6 +6,10 @@ if exists("syntax_on")
 endif
 let g:colors_name = "marques-de-itu"
 
+if !exists('g:marques_search_highlight_style')
+  let g:marques_search_highlight_style = 'default'
+endif
+
 " Color Definitions
 " This theme uses a comprehensive grayscale palette with selective accent colors:
 " - Grayscale: 24 levels from black (#000000) to near-white (#eeeeee)
@@ -42,8 +46,13 @@ if &background == 'light'
   hi VisualNOS		ctermfg=249  ctermbg=240 cterm=italic		guifg=#b2b2b2 guibg=#585858 gui=italic
 
   " SEARCH
-  hi Search		ctermfg=255 ctermbg=130 cterm=bold,italic	guifg=#ffffff guibg=#af5f00 gui=bold,italic
-  hi IncSearch		ctermfg=130 ctermbg=255 cterm=bold		guifg=#af5f00 guibg=#ffffff gui=bold
+  if g:marques_search_highlight_style == 'monochrome'
+    hi Search		ctermfg=233 ctermbg=250 cterm=bold,italic	guifg=#121212 guibg=#bcbcbc gui=bold,italic
+    hi IncSearch	ctermfg=250 ctermbg=233 cterm=bold		guifg=#bcbcbc guibg=#121212 gui=bold
+  else
+    hi Search		ctermfg=255 ctermbg=130 cterm=bold,italic	guifg=#ffffff guibg=#af5f00 gui=bold,italic
+    hi IncSearch	ctermfg=130 ctermbg=255 cterm=bold		guifg=#af5f00 guibg=#ffffff gui=bold
+  endif
 
   " SPELLING
   hi SpellBad		ctermfg=233 ctermbg=124 cterm=bold		guifg=#121212 guibg=#af0000 gui=bold
@@ -155,8 +164,13 @@ else
   hi VisualNOS		ctermfg=240  ctermbg=250 cterm=italic		guifg=#585858 guibg=#bcbcbc gui=italic
 
   " SEARCH
-  hi Search		ctermfg=233 ctermbg=220 cterm=bold,italic	guifg=#121212 guibg=#ffd700 gui=bold,italic
-  hi IncSearch		ctermfg=220 ctermbg=NONE cterm=bold		guifg=#ffd700 guibg=NONE gui=bold
+  if g:marques_search_highlight_style == 'monochrome'
+    hi Search		ctermfg=250 ctermbg=236 cterm=bold,italic	guifg=#bcbcbc guibg=#303030 gui=bold,italic
+    hi IncSearch	ctermfg=236 ctermbg=250 cterm=bold		guifg=#303030 guibg=#bcbcbc gui=bold
+  else
+    hi Search		ctermfg=233 ctermbg=220 cterm=bold,italic	guifg=#121212 guibg=#ffd700 gui=bold,italic
+    hi IncSearch	ctermfg=220 ctermbg=NONE cterm=bold		guifg=#ffd700 guibg=NONE gui=bold
+  endif
 
   " SPELLING
   hi SpellBad		ctermfg=250 ctermbg=124 cterm=bold		guifg=#bcbcbc guibg=#af0000 gui=bold

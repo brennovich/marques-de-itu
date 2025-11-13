@@ -27,16 +27,24 @@ colorscheme marques-de-itu
 
 ### Ghostty
 
-Turns out I'm trying Ghostty, so I added basic support for it. Copy the theme file to your Ghostty themes directory:
+Copy the theme files to your Ghostty themes directory:
 
-```
-cp ghostty ~/.config/ghostty/themes/marques-de-itu
+```bash
+mkdir -p ~/.config/ghostty/themes
+cp ghostty/marques-de-itu-dark ~/.config/ghostty/themes/
+cp ghostty/marques-de-itu-light ~/.config/ghostty/themes/
 ```
 
 Then set the theme in your Ghostty config (`~/.config/ghostty/config`):
 
+**Automatic light/dark switching:**
 ```
-theme = "marques-de-itu"
+theme = dark:marques-de-itu-dark,light:marques-de-itu-light
+```
+
+**Or use a single theme:**
+```
+theme = marques-de-itu-dark
 ```
 
 ## Preview

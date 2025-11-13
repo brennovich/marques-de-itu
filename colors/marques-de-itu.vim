@@ -19,16 +19,16 @@ endif
 
 if &background == 'light'
   " PRIMITIVES
-  hi Boolean		ctermfg=235 ctermbg=NONE cterm=italic		guifg=#262626 guibg=NONE gui=italic
-  hi Character		ctermfg=235 ctermbg=NONE cterm=bold		guifg=#262626 guibg=NONE gui=bold
-  hi Constant		ctermfg=235 ctermbg=NONE cterm=italic		guifg=#262626 guibg=NONE gui=italic
-  hi Float			ctermfg=235 ctermbg=NONE cterm=italic		guifg=#262626 guibg=NONE gui=italic
-  hi Number		ctermfg=235 ctermbg=NONE cterm=italic		guifg=#262626 guibg=NONE gui=italic
+  hi Boolean		ctermfg=237 ctermbg=NONE cterm=italic		guifg=#3a3a3a guibg=NONE gui=italic
+  hi Character		ctermfg=237 ctermbg=NONE cterm=bold		guifg=#3a3a3a guibg=NONE gui=bold
+  hi Constant		ctermfg=237 ctermbg=NONE cterm=italic		guifg=#3a3a3a guibg=NONE gui=italic
+  hi Float			ctermfg=237 ctermbg=NONE cterm=italic		guifg=#3a3a3a guibg=NONE gui=italic
+  hi Number		ctermfg=237 ctermbg=NONE cterm=italic		guifg=#3a3a3a guibg=NONE gui=italic
   hi String		ctermfg=239 ctermbg=NONE cterm=none		guifg=#4e4e4e guibg=NONE gui=none
   hi SpecialChar		ctermfg=233 ctermbg=NONE cterm=none		guifg=#121212 guibg=NONE gui=none
 
   " COMMENTS
-  hi Comment		ctermfg=242 ctermbg=NONE cterm=italic		guifg=#6c6c6c guibg=NONE gui=italic
+  hi Comment		ctermfg=243 ctermbg=NONE cterm=italic		guifg=#767676 guibg=NONE gui=italic
   hi SpecialComment	ctermfg=240 ctermbg=NONE cterm=none		guifg=#585858 guibg=NONE gui=none
   hi Title			ctermfg=240 ctermbg=NONE cterm=none		guifg=#585858 guibg=NONE gui=none
   hi Todo			ctermfg=126 ctermbg=NONE cterm=italic		guifg=#af0087 guibg=NONE gui=italic
@@ -72,15 +72,15 @@ if &background == 'light'
   " PREPROCESSOR DIRECTIVES
   hi Include		ctermfg=233 ctermbg=NONE cterm=italic		guifg=#121212 guibg=NONE gui=italic
   hi Define		ctermfg=233 ctermbg=NONE cterm=italic		guifg=#121212 guibg=NONE gui=italic
-  hi Macro			ctermfg=237 ctermbg=NONE cterm=bold		guifg=#3a3a3a guibg=NONE gui=bold
+  hi Macro			ctermfg=235 ctermbg=NONE cterm=bold		guifg=#262626 guibg=NONE gui=bold
   hi PreCondit		ctermfg=233 ctermbg=NONE cterm=italic		guifg=#121212 guibg=NONE gui=italic
   hi PreProc		ctermfg=233 ctermbg=NONE cterm=italic		guifg=#121212 guibg=NONE gui=italic
 
   " BINDINGS
-  hi Identifier		ctermfg=237 ctermbg=NONE cterm=italic		guifg=#3a3a3a guibg=NONE gui=italic
+  hi Identifier		ctermfg=235 ctermbg=NONE cterm=italic		guifg=#262626 guibg=NONE gui=italic
   hi Function		ctermfg=233 ctermbg=NONE cterm=italic		guifg=#121212 guibg=NONE gui=italic
-  hi Keyword		ctermfg=237 ctermbg=NONE cterm=italic		guifg=#3a3a3a guibg=NONE gui=italic
-  hi Operator		ctermfg=235 ctermbg=NONE cterm=none		guifg=#262626 guibg=NONE gui=none
+  hi Keyword		ctermfg=235 ctermbg=NONE cterm=italic		guifg=#262626 guibg=NONE gui=italic
+  hi Operator		ctermfg=239 ctermbg=NONE cterm=none		guifg=#4e4e4e guibg=NONE gui=none
 
   " TYPES
   hi Type			ctermfg=233 ctermbg=NONE cterm=italic		guifg=#121212 guibg=NONE gui=italic
@@ -104,8 +104,8 @@ if &background == 'light'
   hi Directory		ctermfg=233 ctermbg=NONE cterm=none		guifg=#121212 guibg=NONE gui=none
 
   " FOLD
-  hi FoldColumn		ctermfg=242 ctermbg=NONE cterm=none		guifg=#6c6c6c guibg=NONE gui=none
-  hi Folded		ctermfg=242 ctermbg=NONE cterm=none		guifg=#6c6c6c guibg=NONE gui=none
+  hi FoldColumn		ctermfg=243 ctermbg=NONE cterm=none		guifg=#767676 guibg=NONE gui=none
+  hi Folded		ctermfg=243 ctermbg=NONE cterm=none		guifg=#767676 guibg=NONE gui=none
 
   " PARENTHESIS
   hi MatchParen		ctermfg=166 ctermbg=NONE cterm=bold		guifg=#d75f00 guibg=NONE gui=bold
@@ -130,25 +130,25 @@ if &background == 'light'
   hi WildMenu		ctermfg=233 ctermbg=NONE cterm=none		guifg=#121212 guibg=NONE gui=none
 
   " DIFF
-  hi DiffAdd		ctermfg=233 ctermbg=22  cterm=none		guifg=#121212 guibg=#005f00 gui=none
+  hi DiffAdd		ctermfg=255 ctermbg=22  cterm=none		guifg=#eeeeee guibg=#005f00 gui=none
   hi DiffChange		ctermfg=233 ctermbg=251 cterm=none		guifg=#121212 guibg=#c6c6c6 gui=none
-  hi DiffDelete		ctermfg=233 ctermbg=88  cterm=none		guifg=#121212 guibg=#870000 gui=none
-  hi DiffText		ctermfg=233 ctermbg=33  cterm=none		guifg=#121212 guibg=#0087ff gui=none
+  hi DiffDelete		ctermfg=255 ctermbg=88  cterm=none		guifg=#eeeeee guibg=#870000 gui=none
+  hi DiffText		ctermfg=255 ctermbg=33  cterm=none		guifg=#eeeeee guibg=#0087ff gui=none
 
 else
   " PRIMITIVES
-  hi Boolean		ctermfg=247 ctermbg=NONE cterm=italic		guifg=#9e9e9e guibg=NONE gui=italic
-  hi Character		ctermfg=247 ctermbg=NONE cterm=bold		guifg=#9e9e9e guibg=NONE gui=bold
-  hi Constant		ctermfg=247 ctermbg=NONE cterm=italic		guifg=#9e9e9e guibg=NONE gui=italic
-  hi Float		ctermfg=247 ctermbg=NONE cterm=italic		guifg=#9e9e9e guibg=NONE gui=italic
-  hi Number		ctermfg=247 ctermbg=NONE cterm=italic		guifg=#9e9e9e guibg=NONE gui=italic
-  hi String		ctermfg=248 ctermbg=NONE cterm=none		guifg=#a8a8a8 guibg=NONE gui=none
+  hi Boolean		ctermfg=243 ctermbg=NONE cterm=italic		guifg=#808080 guibg=NONE gui=italic
+  hi Character		ctermfg=243 ctermbg=NONE cterm=bold		guifg=#808080 guibg=NONE gui=bold
+  hi Constant		ctermfg=243 ctermbg=NONE cterm=italic		guifg=#808080 guibg=NONE gui=italic
+  hi Float		ctermfg=243 ctermbg=NONE cterm=italic		guifg=#808080 guibg=NONE gui=italic
+  hi Number		ctermfg=243 ctermbg=NONE cterm=italic		guifg=#808080 guibg=NONE gui=italic
+  hi String		ctermfg=245 ctermbg=NONE cterm=none		guifg=#8a8a8a guibg=NONE gui=none
   hi SpecialChar	ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
   " COMMENTS
-  hi Comment		ctermfg=241 ctermbg=NONE cterm=italic		guifg=#626262 guibg=NONE gui=italic
-  hi SpecialComment	ctermfg=244 ctermbg=NONE cterm=none		guifg=#808080 guibg=NONE gui=none
-  hi Title		ctermfg=244 ctermbg=NONE cterm=none		guifg=#808080 guibg=NONE gui=none
+  hi Comment		ctermfg=242 ctermbg=NONE cterm=italic		guifg=#6c6c6c guibg=NONE gui=italic
+  hi SpecialComment	ctermfg=245 ctermbg=NONE cterm=none		guifg=#8a8a8a guibg=NONE gui=none
+  hi Title		ctermfg=245 ctermbg=NONE cterm=none		guifg=#8a8a8a guibg=NONE gui=none
   hi Todo		ctermfg=126 ctermbg=NONE cterm=italic		guifg=#af0087 guibg=NONE gui=italic
 
   " LINES, COLUMNS
@@ -190,15 +190,15 @@ else
   " PREPROCESSOR DIRECTIVES
   hi Include		ctermfg=250 ctermbg=NONE cterm=italic		guifg=#bcbcbc guibg=NONE gui=italic
   hi Define		ctermfg=250 ctermbg=NONE cterm=italic		guifg=#bcbcbc guibg=NONE gui=italic
-  hi Macro		ctermfg=248 ctermbg=NONE cterm=bold		guifg=#a8a8a8 guibg=NONE gui=bold
+  hi Macro		ctermfg=247 ctermbg=NONE cterm=bold		guifg=#9e9e9e guibg=NONE gui=bold
   hi PreCondit		ctermfg=250 ctermbg=NONE cterm=italic		guifg=#bcbcbc guibg=NONE gui=italic
   hi PreProc		ctermfg=250 ctermbg=NONE cterm=italic		guifg=#bcbcbc guibg=NONE gui=italic
 
   " BINDINGS
-  hi Identifier		ctermfg=248 ctermbg=NONE cterm=italic		guifg=#a8a8a8 guibg=NONE gui=italic
+  hi Identifier		ctermfg=247 ctermbg=NONE cterm=italic		guifg=#9e9e9e guibg=NONE gui=italic
   hi Function		ctermfg=250 ctermbg=NONE cterm=italic		guifg=#bcbcbc guibg=NONE gui=italic
-  hi Keyword		ctermfg=248 ctermbg=NONE cterm=italic		guifg=#a8a8a8 guibg=NONE gui=italic
-  hi Operator		ctermfg=248 ctermbg=NONE cterm=none		guifg=#a8a8a8 guibg=NONE gui=none
+  hi Keyword		ctermfg=247 ctermbg=NONE cterm=italic		guifg=#9e9e9e guibg=NONE gui=italic
+  hi Operator		ctermfg=245 ctermbg=NONE cterm=none		guifg=#8a8a8a guibg=NONE gui=none
 
   " TYPES
   hi Type			ctermfg=250 ctermbg=NONE cterm=italic		guifg=#bcbcbc guibg=NONE gui=italic
@@ -222,8 +222,8 @@ else
   hi Directory		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
 
   " FOLD
-  hi FoldColumn		ctermfg=241 ctermbg=NONE cterm=none		guifg=#626262 guibg=NONE gui=none
-  hi Folded		ctermfg=241 ctermbg=NONE cterm=none		guifg=#626262 guibg=NONE gui=none
+  hi FoldColumn		ctermfg=242 ctermbg=NONE cterm=none		guifg=#6c6c6c guibg=NONE gui=none
+  hi Folded		ctermfg=242 ctermbg=NONE cterm=none		guifg=#6c6c6c guibg=NONE gui=none
 
   " PARENTHESIS
   hi MatchParen		ctermfg=166 ctermbg=NONE cterm=bold		guifg=#d75f00 guibg=NONE gui=bold

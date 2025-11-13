@@ -2,7 +2,7 @@
 # A minimalistic grayscale theme with selective accent colors
 # Based on the marques-de-itu Vim colorscheme (light mode)
 
-foreground = #121212
+foreground = #0a0a0a
 background = #eeeeee
 cursor-color = #af0000
 cursor-text = #ffffff

@@ -56,6 +56,14 @@ theme = marques-de-itu-dark
 ### Diff
 ![Diff](./images/diff.png)
 
+### Shell
+![Shell](./images/sh-dark-ghostty.png)
+![Shell](./images/sh-light-ghostty.png)
+
+### Makefile
+![Makefile](./images/makefile-dark-ghostty.png)
+![Makefile](./images/makefile-light-ghostty.png)
+
 ## Resources
 
 - Heavily inspired by https://github.com/Lokaltog/vim-monotone and its inspirations

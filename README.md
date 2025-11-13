@@ -78,6 +78,11 @@ theme = marques-de-itu-dark
 ![Makefile](./images/makefile-dark-ghostty.png)
 ![Makefile](./images/makefile-light-ghostty.png)
 
+### Airline support
+
+Even though I don't use vim-airline myself, I've added support for it. Here's how it looks:
+![Airline Dark](./images/vim-airline.png)
+
 ## Resources
 
 - Heavily inspired by https://github.com/Lokaltog/vim-monotone and its inspirations

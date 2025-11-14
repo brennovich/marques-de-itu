@@ -10,6 +10,10 @@ if !exists('g:marques_search_highlight_style')
   let g:marques_search_highlight_style = 'default'
 endif
 
+if !exists('g:marques_opaque_background')
+  let g:marques_opaque_background = 0
+endif
+
 " Color Definitions
 " This theme uses a comprehensive grayscale palette with selective accent colors:
 " - Grayscale: 24 levels from black (#000000) to near-white (#eeeeee)
@@ -96,7 +100,11 @@ if &background == 'light'
   hi Exception		ctermfg=233 ctermbg=NONE cterm=bold		guifg=#121212 guibg=NONE gui=bold
 
   " MISC
-  hi Normal		ctermfg=233 ctermbg=NONE cterm=none		guifg=#121212 guibg=NONE gui=none
+  if g:marques_opaque_background
+    hi Normal		ctermfg=233 ctermbg=255 cterm=none		guifg=#121212 guibg=#eeeeee gui=none
+  else
+    hi Normal		ctermfg=233 ctermbg=NONE cterm=none		guifg=#121212 guibg=NONE gui=none
+  endif
   hi Cursor		ctermfg=255  ctermbg=124  cterm=none		guifg=#ffffff guibg=#af0000 gui=none
   hi Underlined		ctermfg=239 ctermbg=NONE cterm=underline		guifg=#4e4e4e guibg=NONE gui=underline
   hi SpecialKey		ctermfg=251 ctermbg=NONE cterm=none		guifg=#c6c6c6 guibg=NONE gui=none
@@ -214,7 +222,11 @@ else
   hi Exception		ctermfg=250 ctermbg=NONE cterm=bold		guifg=#bcbcbc guibg=NONE gui=bold
 
   " MISC
-  hi Normal		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+  if g:marques_opaque_background
+    hi Normal		ctermfg=250 ctermbg=233 cterm=none		guifg=#bcbcbc guibg=#101010 gui=none
+  else
+    hi Normal		ctermfg=250 ctermbg=NONE cterm=none		guifg=#bcbcbc guibg=NONE gui=none
+  endif
   hi Cursor		ctermfg=16  ctermbg=124  cterm=none		guifg=#000000 guibg=#af0000 gui=none
   hi Underlined		ctermfg=244 ctermbg=NONE cterm=underline		guifg=#808080 guibg=NONE gui=underline
   hi SpecialKey		ctermfg=234 ctermbg=NONE cterm=none		guifg=#1c1c1c guibg=NONE gui=none

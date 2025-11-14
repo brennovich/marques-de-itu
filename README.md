@@ -5,11 +5,11 @@ A simple, minimalistic, distraction-free theme for Vim. During my time living on
 ![Rua Marquês de Itu](./images/marques-de-itu.jpg)
 _photo: @brunohenrique_
 
-## Technical details
+## About
 
 This is a 256-color theme, but also has the GUI colors. It means that it works great with on Terminal.app,  which only supports 256 colors, but also with more modern terminals like iTerm2, Alacritty, Kitty, etc that support `set termguicolors`.
 
-It has both light and dark background, your terminal should set the background color accordingly.
+It has both light and dark background support that follows your background setting, and a few configuration options to customize the look and feel.
 
 ## Configuration
 
@@ -24,6 +24,14 @@ let g:marques_search_highlight_style = 'monochrome'
 Available options:
 - `'default'` - Bright yellow/orange highlights (default)
 - `'monochrome'` - Subtle grayscale highlights
+
+### Opaque Background
+
+By default, the theme uses transparent backgrounds that inherit from your terminal. If you have paddings or a transparent background in your terminal you probably want to use the default. If not, andyou prefer solid background colors, add this to your `.vimrc`:
+
+```vim
+let g:marques_opaque_background = 1
+```
 
 ## Installation
 

@@ -25,3 +25,11 @@ or
 ```
 include themes/marques-de-itu-light.conf
 ```
+
+The cursor color is not set so it respects the scent color of your choice, add to your `kitty.conf`:
+
+```
+cursor #6768aa
+cursor_text_color #f6f4f0
+cursor_beam_thickness 2
+```

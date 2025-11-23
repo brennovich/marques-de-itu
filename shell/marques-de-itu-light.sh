@@ -6,11 +6,11 @@
 export SHELL_THEME=marques-de-itu-light
 
 color00="12/12/12" # Base 00 - Black
-color01="af/00/00" # Base 08 - Red
-color02="00/5f/00" # Base 0B - Green
-color03="ff/d7/00" # Base 0A - Yellow
-color04="00/87/ff" # Base 0D - Blue
-color05="af/00/87" # Base 0E - Magenta
+color01="4e/4e/4e" # Base 08 - Gray 1
+color02="76/76/76" # Base 0B - Gray 2
+color03="26/26/26" # Base 0A - Gray 3
+color04="58/58/58" # Base 0D - Gray 4
+color05="8a/8a/8a" # Base 0E - Gray 5
 color06="9e/9e/9e" # Base 0C - Cyan
 color07="ee/ee/ee" # Base 05 - White
 color08="6c/6c/6c" # Base 03 - Bright Black

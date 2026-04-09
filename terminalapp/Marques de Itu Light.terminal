@@ -254,6 +254,8 @@
 	<true/>
 	<key>ShowRepresentedURLPathInTabTitle</key>
 	<false/>
+	<key>Bell</key>
+	<false/>
 	<key>VisualBell</key>
 	<false/>
 	<key>VisualBellOnlyWhenMuted</key>

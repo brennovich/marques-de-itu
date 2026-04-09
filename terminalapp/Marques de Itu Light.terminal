@@ -253,7 +253,11 @@
 	<key>ShowRepresentedURLInTitle</key>
 	<true/>
 	<key>ShowRepresentedURLPathInTabTitle</key>
-	<true/>
+	<false/>
+	<key>VisualBell</key>
+	<false/>
+	<key>VisualBellOnlyWhenMuted</key>
+	<false/>
 	<key>ShowRepresentedURLPathInTitle</key>
 	<true/>
 	<key>TextBoldColor</key>

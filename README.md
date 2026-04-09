@@ -65,6 +65,17 @@ Then set the theme in your Ghostty config (`~/.config/ghostty/config`):
 theme = dark:marques-de-itu-dark,light:marques-de-itu-light
 ```
 
+### Terminal.app
+
+Double-click the `.terminal` file to import the profile, or use the command line:
+
+```bash
+open terminalapp/Marques\ de\ Itu\ Dark.terminal
+open terminalapp/Marques\ de\ Itu\ Light.terminal
+```
+
+Then go to **Terminal > Settings > Profiles** and set the imported profile as default.
+
 ## Preview
 
 ### Golang

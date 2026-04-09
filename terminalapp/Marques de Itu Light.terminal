@@ -251,7 +251,7 @@
 	<key>ShowDimensionsInTitle</key>
 	<false/>
 	<key>ShowRepresentedURLInTitle</key>
-	<true/>
+	<false/>
 	<key>ShowRepresentedURLPathInTabTitle</key>
 	<false/>
 	<key>Bell</key>

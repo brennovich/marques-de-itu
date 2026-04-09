@@ -151,6 +151,8 @@
 	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
+	<key>Bell</key>
+	<false/>
 	<key>CursorColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -250,15 +252,11 @@
 	</data>
 	<key>ShowDimensionsInTitle</key>
 	<false/>
+	<key>ShowRepresentedURLInTabTitle</key>
+	<false/>
 	<key>ShowRepresentedURLInTitle</key>
-	<false/>
+	<true/>
 	<key>ShowRepresentedURLPathInTabTitle</key>
-	<false/>
-	<key>Bell</key>
-	<false/>
-	<key>VisualBell</key>
-	<false/>
-	<key>VisualBellOnlyWhenMuted</key>
 	<false/>
 	<key>ShowRepresentedURLPathInTitle</key>
 	<true/>
@@ -281,6 +279,10 @@
 	AAAAAAAZAAAAAAAAAAAAAAAAAAAA3A==
 	</data>
 	<key>UseBrightBold</key>
+	<false/>
+	<key>VisualBell</key>
+	<false/>
+	<key>VisualBellOnlyWhenMuted</key>
 	<false/>
 	<key>name</key>
 	<string>Marques de Itu Light</string>
